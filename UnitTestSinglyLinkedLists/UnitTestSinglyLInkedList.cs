@@ -477,5 +477,14 @@ namespace UnitTestSinglyLinkedLists
             var expected = new string[] { "bar", "bar", "foo", "grille" };
             CollectionAssert.AreEqual(expected, list.ToArray());
         }
+
+        [TestMethod]
+        public void TestSwapMethod()
+        {
+            SinglyLinkedList list = new SinglyLinkedList("foo", "bar", "grille", "zoo", "cat");
+            list.Swap(1, 4);
+            var expected = new string[] { "foo", "grille", "bar", "zoo", "cat" };
+            CollectionAssert.AreEqual(expected, list.ToArray());
+        }
     }
 }
